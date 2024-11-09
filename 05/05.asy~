@@ -1,0 +1,60 @@
+settings.outformat = "pdf";
+size(x = 7.5cm, 5cm);
+real SizeArr = 4;
+pair A = (1,0), B = (2, 0), C = (2, 1), D = (4, 1), E = (2, -1), F = (4, -1), G = (4, -0.7), H = (5, -0.7), B1 = (3.5, 0), G1 = (2.5, -0.7);
+
+pair a = (6, -0.5), b = (7, -0.5), c = (7, 1), d = (9, 1), e = (7, -1), f = (9, -1), g = (9, 0.55), h = (10, 0.55);
+
+pair G2 = (3, -0.7), B2 = (3, 0);
+
+pair T1 = (1.4, -0.1), T2 = (1.7, 1), T3 = (1.85, 0.5), T4 = (1.85, -0.5), T5 = (1.7, -1), T6 = (2.9, -0.4), T7 = (3.85, 0.5), T8 = (4.7, -0.8), T9 = (3.85, -0.85);
+
+path BC = B--C;
+path DG = D--G;
+path G2B2=G2--B2;
+path BE = B--E;
+path FG = F--G;
+
+path AB = A--B;
+path CD = C--D;
+path EF = E--F;
+path GH = G--H;
+path BB1= B--B1;
+path GG1= G--G1;
+
+path ab = a--b;
+path cd = c--d;
+path ef = e--f;
+path gh = g--h;
+
+path bc = b--c;
+
+draw(AB);
+draw(CD);
+draw(EF);
+draw(GH);
+draw(BB1, dashed);
+draw(GG1, dashed);
+
+draw(ab);
+draw(cd);
+draw(ef);
+draw(gh);
+
+draw(BC,   arrow = Arrows(size = SizeArr));
+draw(DG,   arrow = Arrows(size = SizeArr));
+draw(G2B2, arrow = Arrows(size = SizeArr));
+draw(BE,   arrow = Arrows(size = SizeArr));
+draw(FG,   arrow = Arrows(size = SizeArr));
+
+draw(bc, arrow = Arrows(size = SizeArr));
+
+label(Label("$(M_A+m_a)c^2$", fontsize(5pt)), T1, NoAlign);
+label(Label("$M_0^*c^2$", fontsize(5pt)), T2, NoAlign);
+label(Label("$T_1 '$", fontsize(4pt)), T3, NoAlign);
+label(Label("$\varepsilon_a$", fontsize(4pt)), T4, NoAlign);
+label(Label("$M_0c^2$", fontsize(4pt)), T5, NoAlign);
+label(Label("$Q$", fontsize(4pt)), T6, NoAlign);
+label(Label("$T_2''$", fontsize(4pt)), T7, NoAlign);
+label(Label("$(M_B + m_b)c^2$", fontsize(4pt)), T8, NoAlign);
+label(Label("$\varepsilon_b$", fontsize(4pt)), T9, NoAlign);
